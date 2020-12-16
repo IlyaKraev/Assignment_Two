@@ -11,7 +11,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Trainer List</title>
+        <title>Edit Trainer</title>
         <c:url value="/css/style.css" var="jstlCss" />
         <link href="${jstlCss}" rel="stylesheet" />
         <script src="https://use.fontawesome.com/95932934dd.js"></script>
@@ -26,7 +26,6 @@
                 <li><a href="<c:url value='/${newurl}' />"">New Trainer</a></li>
             </ul>
         </div>    
-        <h1>Project name: ${projectName}</h1>
         <div class="main">
             <div class="form">
                 <h2><i class="fa fa-user-circle" aria-hidden="true"></i> Edit Trainer</h2>
@@ -34,7 +33,7 @@
                     String updateUrlFINAL = request.getContextPath() + "/" + request.getAttribute("updateurl");
                     session.setAttribute("updateUrlFINAL", updateUrlFINAL);
                 %>
-                <form:form method="POST" action="${updateUrlFINAL}" id="tform" modelAttribute="trainer">
+                <form:form method="POST" action="${updateUrlFINAL}" modelAttribute="trainer">
                     <form:input type="hidden" path="id" id="id"/>
                     <div class="form-field">
                         <form:input path="firstname" placeholder="First name" autocomplete="off"/>
@@ -49,8 +48,8 @@
                         <form:input path="subject" placeholder="Subject" autocomplete="off"/>
                     </div>
                     <div class="form-field">
-                        <input id="tsumbmit" type="submit" value="Update" class="edit" />
-                        <input id="treset" type="reset" value="Clear" class="clear" />
+                        <input type="submit" value="Update" class="edit" />
+                        <input type="reset" value="Clear" class="clear" />
                     </div>
                 </form:form>
             </div>

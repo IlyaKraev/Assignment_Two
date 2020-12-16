@@ -24,7 +24,6 @@
                 <li><a href="<c:url value='/${newurl}' />"">New Trainer</a></li>
             </ul>
         </div>    
-        <h1>Project name: ${projectName}</h1>
         <h1>Welcome to the Sisyphus Private School Management System!</h1>
         <p id="error">Due to an unknown error you may only access the trainers section.</p>
         <div class="main">

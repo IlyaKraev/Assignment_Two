@@ -25,7 +25,7 @@ public class AppConfig implements WebMvcConfigurer {
         return viewResolver;
     }
 
-     @Override
+    @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/img/**")
                 .addResourceLocations("classpath:static/img/");

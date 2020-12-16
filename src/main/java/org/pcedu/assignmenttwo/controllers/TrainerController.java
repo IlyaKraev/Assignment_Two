@@ -29,7 +29,6 @@ public class TrainerController {
         List<Trainer> trainers = trainerService.viewAllTrainers();
         view.addAttribute("trainers", trainers);
         view.addAttribute("editurl", editurl);
-        view.addAttribute("projectName", "Assignment Two");
         view.addAttribute("newurl", newurl);
         view.addAttribute("deleteurl", deleteurl);
         return ("list");
