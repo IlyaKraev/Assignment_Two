@@ -8,26 +8,27 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
+//import javax.persistence.NamedQueries;
+//import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
+import org.springframework.format.annotation.DateTimeFormat;
 
 
 @Entity
 @Table(name = "trainers", catalog = "ik_assignmenttwo", schema = "")
 @XmlRootElement
-@NamedQueries({
-    @NamedQuery(name = "Trainer.findAll", query = "SELECT t FROM Trainer t"),
-    @NamedQuery(name = "Trainer.findById", query = "SELECT t FROM Trainer t WHERE t.id = :id"),
-    @NamedQuery(name = "Trainer.findByFirstname", query = "SELECT t FROM Trainer t WHERE t.firstname = :firstname"),
-    @NamedQuery(name = "Trainer.findByLastname", query = "SELECT t FROM Trainer t WHERE t.lastname = :lastname"),
-    @NamedQuery(name = "Trainer.findByDateofbirth", query = "SELECT t FROM Trainer t WHERE t.dateofbirth = :dateofbirth"),
-    @NamedQuery(name = "Trainer.findBySubject", query = "SELECT t FROM Trainer t WHERE t.subject = :subject")})
+//@NamedQueries({
+//    @NamedQuery(name = "Trainer.findAll", query = "SELECT t FROM Trainer t"),
+//    @NamedQuery(name = "Trainer.findById", query = "SELECT t FROM Trainer t WHERE t.id = :id"),
+//    @NamedQuery(name = "Trainer.findByFirstname", query = "SELECT t FROM Trainer t WHERE t.firstname = :firstname"),
+//    @NamedQuery(name = "Trainer.findByLastname", query = "SELECT t FROM Trainer t WHERE t.lastname = :lastname"),
+//    @NamedQuery(name = "Trainer.findByDateofbirth", query = "SELECT t FROM Trainer t WHERE t.dateofbirth = :dateofbirth"),
+//    @NamedQuery(name = "Trainer.findBySubject", query = "SELECT t FROM Trainer t WHERE t.subject = :subject")})
 public class Trainer implements Serializable {
 
     private static final long serialVersionUID = 1L;
@@ -50,6 +51,7 @@ public class Trainer implements Serializable {
     @NotNull
     @Column(name = "dateofbirth", nullable = false)
     @Temporal(TemporalType.DATE)
+    @DateTimeFormat(pattern="yyyy-MM-dd")
     private Date dateofbirth;
     @Basic(optional = false)
     @NotNull

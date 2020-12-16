@@ -54,6 +54,32 @@ body {
 }
 
 
+/* TABLE */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, td, th {
+    border: 1px solid #000000;
+    text-align: center;
+    border-radius: 3px;
+    padding: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.delete {
+    color: red;
+    font-weight: bold;
+}
+
+.tid {
+    color: green;
+    font-weight: bold;
+}
+
+
 /* MAIN */
 
 h1 {text-align: center;}
@@ -269,50 +295,6 @@ h1 {text-align: center;}
 }
 
 
-/* ACCORDION */
-
-#container {
-    min-width: 1000px;
-}
-
-.parent {
-    width: 100%;
-    height: 30px;
-    background-color: rgb(13, 23, 66);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.parent:hover {
-    background-color: rgb(34, 74, 255);
-}
-
-.child {
-    width: 100%;
-    height: auto;
-    background-color: grey;
-    text-align: center;
-    padding: 20px;
-    display: none;
-}
-
-.next_page {
-    width: 100%;
-    height: 30px;
-    background-color: rgb(13, 23, 66);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    border: 1px solid rgb(255, 255, 255);
-    border-radius: 10px;
-    padding: 20px;
-}
-
-.next_page:hover {
-    background-color: rgb(34, 74, 255);
-}
 
 
 /* VALIDATION */

@@ -29,8 +29,12 @@
         <h1>Project name: ${projectName}</h1>
         <div class="main">
             <div class="form">
-                <h2><i class="fa fa-user-circle" aria-hidden="true"></i> New Trainer</h2>
-                <form:form method="POST" action="new" id="tform" modelAttribute="trainer">
+                <h2><i class="fa fa-user-circle" aria-hidden="true"></i> Edit Trainer</h2>
+                <%
+                    String updateUrlFINAL = request.getContextPath() + "/" + request.getAttribute("updateurl");
+                    session.setAttribute("updateUrlFINAL", updateUrlFINAL);
+                %>
+                <form:form method="POST" action="${updateUrlFINAL}" id="tform" modelAttribute="trainer">
                     <form:input type="hidden" path="id" id="id"/>
                     <div class="form-field">
                         <form:input path="firstname" placeholder="First name" autocomplete="off"/>
@@ -45,7 +49,7 @@
                         <form:input path="subject" placeholder="Subject" autocomplete="off"/>
                     </div>
                     <div class="form-field">
-                        <input id="tsumbmit" type="submit" value="Submit" class="submit" />
+                        <input id="tsumbmit" type="submit" value="Update" class="edit" />
                         <input id="treset" type="reset" value="Clear" class="clear" />
                     </div>
                 </form:form>
