@@ -2,6 +2,8 @@
     Document   : list
     Created on : Dec 15, 2020, 7:11:54 PM
     Author     : Helios
+
+    Note       : Try removing the .js to see if the form will accept your wrong input (it won't)
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

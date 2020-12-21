@@ -27,7 +27,7 @@ public class TrainerController {
     private final String updateurl = "update";
 
     private String error = "I can't let you do that, " + System.getProperty("user.name");
-    
+
     @Autowired
     ITrainer trainerService;
 
@@ -66,7 +66,7 @@ public class TrainerController {
         } else {
             trainerService.save(trainer);
             String create = "Trainer " + trainer.getFirstname() + " " + trainer.getLastname() + " created successfuly!";
-            view.addAttribute("msg", create);
+            view.addAttribute("success", create);
         }
         return ("newtrainer");
     }

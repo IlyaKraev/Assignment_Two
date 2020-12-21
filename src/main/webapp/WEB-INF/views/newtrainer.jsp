@@ -2,6 +2,8 @@
     Document   : list
     Created on : Dec 15, 2020, 7:11:54 PM
     Author     : Helios
+
+    Note       : Try removing the .js to see if the form will accept your wrong input (it won't)
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -28,8 +30,9 @@
                 <li><a href="<c:url value='/${newurl}' />"">New Trainer</a></li>
             </ul>
         </div>    
-                <p class="success">${msg}</p>
         <div class="main">
+            <br>
+                <p class="success">${msg}</p>
             <div class="form">
                 <h2><i class="fa fa-user-circle" aria-hidden="true"></i> New Trainer</h2>
                 <form:form method="POST" action="new" modelAttribute="trainer">

@@ -149,6 +149,8 @@ form.addEventListener('submit', function (e) {
     }
 });
 
+// This used to work on HTML files, I suspect it doen't want to on JSP files.
+// Shame, it was a nice little touch that would turn the fields gree if you input the correct values
 form.addEventListener('input', debounce(function (e) {
     switch (e.target.id) {
         case 'firstname':
@@ -163,6 +165,6 @@ form.addEventListener('input', debounce(function (e) {
         case 'subject':
             checksubject();
     }
-}, 1000));
+}));
 
 
