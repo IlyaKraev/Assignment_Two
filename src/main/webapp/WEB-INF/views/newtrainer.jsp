@@ -29,10 +29,10 @@
                 <li><a href="<c:url value='/${listurl}' />">Trainer list</a></li>
                 <li><a href="<c:url value='/${newurl}' />"">New Trainer</a></li>
             </ul>
-        </div>    
+        </div>
+        <p> </p>
+            <p class="success">${success}</p>
         <div class="main">
-            <br>
-                <p class="success">${msg}</p>
             <div class="form">
                 <h2><i class="fa fa-user-circle" aria-hidden="true"></i> New Trainer</h2>
                 <form:form method="POST" action="new" modelAttribute="trainer">
@@ -57,8 +57,8 @@
                     <div class="form-field">
                         <input type="submit" value="Submit" class="submit" />
                         <input type="reset" value="Clear" class="clear" /><br>
-                    <form:errors path="*" >${error}</form:errors> 
-                    </div>
+                        <form:errors path="*" >${error}</form:errors> 
+                        </div>
                 </form:form>
             </div>
         </div>
